@@ -1,5 +1,7 @@
 # Repro: no InteractiveViewer (pinch-zoom/pan) and no Image.network(headers:)
 
+Issue: https://github.com/DartNative/dartnative/issues/62
+
 DartNative 1.0.0 has no `InteractiveViewer` (or any other pinch-zoom/pan container), and `Image.network` takes no `headers`. Apps that show photos of receipts and invoices need zoom to read them, and attachments behind auth need an `Authorization` header, so today an app downloads the file through its own HTTP client and shows it with `Image.file`, without zoom.
 
 ## Run
